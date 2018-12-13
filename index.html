@@ -12,23 +12,18 @@
                 font-family: sans-serif;
                 }
 
-            html {
-                
-                color:#878787;
-            }
             main {
                 margin: 1rem auto;
                 
-                font-size:7vw;
+                font-size:6.5vw;
 
                 position:absolute;
-                top:40%;
+                top:35%;
                 left:50%;
                 transform:translate(-50%,-50%);
                 width:90%;
                 max-width: 800px;
-                background:#fdfdfd;
-                
+                background:#fff;
                 text-align: center;
               
             }
@@ -40,9 +35,8 @@
             input{
                 padding: 0.2rem 1rem;
                 font-size: 16px;
-                color:inherit;
                 border-radius: 4px; 
-                width: 60%;
+                width: 65%;
                 height: 40px;
                 margin: 0 auto;
                 border: none; 
@@ -50,9 +44,76 @@
                 box-shadow: 0px 1.5px 0px 0px #ccc;
                
             }
+            .googlebuttons {
+                    display: inline-block;
+                    background-color: #f0f0f0;
+                    font-weight: bold;
+                    border: 0px;
+                    height: 30px;
+                    width: 150px;
+                    color: #747477;
+                    margin-right: 5px;
+                }
+                
+                .googlebuttons:hover {
+                    color: #000;
+                    border: 1px solid #747477;
+                }
+                .buttonholder {
+                display: flex;
+                justify-content: center;
+                    
+                }
+
+                .navbar {
+                display: flex;
+                background-color: #fff;
+                float: right;
+                }
+
+            /* Style the navigation bar links */
+            .navbar a {
+                color: #747477;
+                padding: 14px 5px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .navbar #signin{
+                background: blue;
+                color:white;
+                margin-right: 15px;
+                text-decoration: none;   
+            }
+
+            /* Change color on hover */
+            .navbar a:hover {
+               text-decoration: underline;   
+            }
+            @media (max-width: 500px) {
+                .navbar a {
+                display: none;
+            }
+            .buttonholder{
+                display: none;
+            }
+            input{
+                 
+                width: 80%;
+                height: 40px;
+                margin: 0 auto;
+               
+               
+            }
+
+            }
         </style>
     </head>
     <body>
+            <div class="navbar">
+                <a href="#">Gmail</a>
+                <a href="#">Images</a>
+                <a href="#" id="signin">Sign in</a>
+            </div>
         <main>
             <form name="my-form" action="#" method="get">
                 <div >
@@ -61,6 +122,10 @@
                 <div class="form-box">
                         <input type="text" id="username" name="username">
                 </div>
+                <div class="buttonholder">
+                    <button class="googlebuttons" id="search">Google Search</button>
+                    <button class="googlebuttons">I'm Feeling Lucky</button>
+            </div>
             </form>
         </main>
         
